@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-<meta charset="utf-8">
-<title>Agenda de contatos</title>
-<link rel="icon" href="imagens/telefone.png">
-<link rel="stylesheet" href="style.css">
-</head>
+
+ <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Secretaria</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+
+
 <body>
-	<h1>Criar novo contatos</h1>
-	<form action="insert" name="frmContato">
-		<table>
-			<tr>
-				<td><input type="text" name="nome" placeholder="nome "
-					class="caixa1"></td>
-			</tr>
-			<tr>
-				<td><select name="cargo">
-						<option value="valor1">Opção</option>
+	<div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">Secretaria</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="novo.html">Cadastrar</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Controller?listagem">Presbiteros</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Cooperadores</a>
+                
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+                <form action="insert" name="frmContato">
+				  <div class="form-group">
+					    <label for="exampleInputEmail1">Nome</label>
+					    <input type="text" name="nome" class="form-control" id="exampleInputEmail1" placeholder="nome">				 
+				   </div>
+			      <div class="form-group">
+				    <label for="exampleFormControlSelect1">Cargo</label>
+				    <select class="form-control" id="exampleFormControlSelect1" name="cargo">
+				     <option value="valor1">Opção</option>
 						<option value="Presbitero">Presbitero</option>
 						<option value="cooperador">Coperador</option>
-				</select></td>
-			</tr>
-			<tr>
-				<td><select name="dizimista">
-						<option value="valor1">Opção</option>
+				    </select>
+				     <div class="form-group">
+				    <label for="exampleFormControlSelect1">Dizimista</label>
+				    <select class="form-control" id="exampleFormControlSelect1" name="dizimista">
+				     <option value="valor1">Opção</option>
 						<option value="Sim">Sim</option>
 						<option value="Nao">Não</option>
-				</select></td>
-			</tr>
-		</table>
-		<input type="submit" value="Adicionar" class="botao1"
-			>
-
-	</form>
-
+				    </select><br>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Enviar</button>
+				</form>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="scripts.js"></script>
 </body>
 </html>

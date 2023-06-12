@@ -80,7 +80,7 @@ public class Controller extends HttpServlet {
 	protected void editarCadastro(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// recebiemnto do id do registro a ser editado
-		String id_membro = request.getParameter("id_membro");
+		String id_membro = request.getParameter("id_membro"); 
 		// Setar a variabel JavaBeans
 		membro.setId_membro(id_membro);
 		// executar o método selecionarContato (DAO)
