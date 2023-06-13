@@ -61,11 +61,37 @@ public class DAO {
 		}
 	}
 
-	// crud read
+	// crud read presbitero
 	public ArrayList<JavaBeans> listarContatos() {
 		// criando um objeto para acessar a class javabean
 		ArrayList<JavaBeans> cadastros = new ArrayList<>();
 		String read = "SELECT * FROM membro WHERE cargo = 'Presbitero' ORDER BY nome;";
+		try {
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(read);
+			ResultSet rs = pst.executeQuery();
+			while (rs.next()) {
+				String id_membro = rs.getString(1);
+				String nome = rs.getString(2);
+				String cargo = rs.getString(3);
+				String dizimista = rs.getString(4);
+				// populando o arraylist
+				cadastros.add(new JavaBeans(id_membro, nome, cargo, dizimista));
+			}
+			con.close();
+			return cadastros;
+
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
+	
+	// crud read cooperadores
+	public ArrayList<JavaBeans> listarCooperadores() {
+		// criando um objeto para acessar a class javabean
+		ArrayList<JavaBeans> cadastros = new ArrayList<>();
+		String read = "SELECT * FROM membro WHERE cargo = 'cooperador' ORDER BY nome;";
 		try {
 			Connection con = conectar();
 			PreparedStatement pst = con.prepareStatement(read);

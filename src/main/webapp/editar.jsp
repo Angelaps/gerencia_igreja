@@ -23,13 +23,10 @@
 		<div class="border-end bg-white" id="sidebar-wrapper">
 			<div class="sidebar-heading border-bottom bg-light">Secretaria</div>
 			<div class="list-group list-group-flush">
-				<a
-					class="list-group-item list-group-item-action list-group-item-light p-3"
-					href="novo.html">Cadastrar</a> <a
-					class="list-group-item list-group-item-action list-group-item-light p-3"
-					href="Controller?listagem">Presbiteros</a> <a
-					class="list-group-item list-group-item-action list-group-item-light p-3"
-					href="#!">Cooperadores</a>
+				<a class="list-group-item list-group-item-action list-group-item-light p-3" href="novo.html">Cadastrar</a> 
+				<a class="list-group-item list-group-item-action list-group-item-light p-3" href="Controller?listagem">Presbiteros</a> 
+				<a class="list-group-item list-group-item-action list-group-item-light p-3"href="Controller?listagemCoperadores">Cooperadores</a>
+				<a class="list-group-item list-group-item-action list-group-item-light p-3" href="Controller?listagemCoperadores">Setores</a>
 
 			</div>
 		</div>
@@ -76,7 +73,6 @@
 							<label for="exampleFormControlSelect1">Dizimista</label> 
 							<select class="form-control" id="exampleFormControlSelect1" name="dizimista">
 								<option value="valor1">Opção</option>
-								<option value="valor1"
 									<% if ("valor1".equals(request.getAttribute("dizimista"))) { out.print("selected"); } %>>Opção</option>
 								<option value="Sim"
 									<% if ("Sim".equals(request.getAttribute("dizimista"))) { out.print("selected"); } %>>Sim</option>

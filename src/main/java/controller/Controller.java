@@ -36,6 +36,8 @@ public class Controller extends HttpServlet {
 			novoConato(request, response);
 		} else if (action.equals("/Controller") && request.getParameter("listagem") != null) {
 			listaCadastro(request, response);
+		}  else if (action.equals("/Controller") && request.getParameter("listagemCoperadores") != null) {
+			listaCoperadores(request, response);
 		} else if (action.equals("/select")) {
 			editarCadastro(request, response);
 		} else if (action.equals("/update")) {
@@ -53,6 +55,7 @@ public class Controller extends HttpServlet {
 		response.sendRedirect("central.jsp");
 	}
 
+	// listagem de todos os presbiteros
 	protected void listaCadastro(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// criando um objeto que ira receber os dados Javabeans
@@ -62,6 +65,19 @@ public class Controller extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("listaPresbitero.jsp");
 		rd.forward(request, response);
 	}
+	
+	
+	// listagem de todos coperadores
+	protected void listaCoperadores(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// criando um objeto que ira receber os dados Javabeans
+				ArrayList<JavaBeans> lista = dao.listarCooperadores();
+				// encaminhar a lista
+				request.setAttribute("presbiteros", lista);
+				RequestDispatcher rd = request.getRequestDispatcher("listaCooperador.jsp");
+				rd.forward(request, response);
+	}
+
 
 	// Novo contatos
 	protected void novoConato(HttpServletRequest request, HttpServletResponse response)
