@@ -85,6 +85,18 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("presbi
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="scripts.js"></script>
+        <script type="text/javascript">
+         // confirmação de exclusao 
+         
+         function confirmar(id_membro){
+        	 let resposta = confirm("Confirma a exclusão deste contato ?")
+        	 if (resposta === true) {
+				//alert(id_membro)
+				window.location.href = "delete?id_membro=" + id_membro;
+			}
+         }
+        
+        </script>
 
 </body>
 
