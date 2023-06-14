@@ -28,8 +28,6 @@
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="novo.html">Cadastrar</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Controller?listagem">Presbiteros</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Controller?listagemCoperadores">Cooperadores</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Controller?listagemCoperadores">Setores</a>
-                
                 </div>
             </div>
             <!-- Page content wrapper-->
